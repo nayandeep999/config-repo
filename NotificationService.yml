@@ -24,4 +24,4 @@ spring:
       retries: 3
 
 server:
-  port: 8085
+  port: 8086
