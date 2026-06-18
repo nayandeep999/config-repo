@@ -15,6 +15,10 @@ server:
   port: 8083
 
 eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
   instance:
     hostname: localhost
     prefer-ip-address: true
@@ -29,6 +33,11 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 logging:
   pattern:
