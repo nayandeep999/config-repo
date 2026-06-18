@@ -21,12 +21,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 
-  instance:
-    hostname: localhost
-    ip-address: 127.0.0.1
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
-
 management:
   tracing:
     enabled: true
