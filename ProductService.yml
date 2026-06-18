@@ -22,7 +22,10 @@ eureka:
     fetch-registry: true
 
   instance:
+    hostname: localhost
+    ip-address: 127.0.0.1
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
 
 management:
   tracing:
@@ -33,6 +36,11 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 logging:
   pattern:
